@@ -1,0 +1,20 @@
+import { ArrowUpRight } from 'lucide-react'
+
+function PrivacyPage() {
+  return (
+    <main className="inner-page privacy-page">
+      <section className="page-intro page-gutter"><span className="eyebrow">ONE TECH / INFORMAZIONI LEGALI</span><h1>Privacy, senza<br /><span>giri di parole.</span></h1><p>Qui trovi cosa succede ai dati quando visiti questo sito o ci invii una richiesta.</p><p className="policy-updated">Ultimo aggiornamento: 2 ottobre 2026</p></section>
+      <div className="policy-layout page-gutter"><nav className="policy-index" aria-label="Indice informativa"><a href="#titolare">Chi siamo</a><a href="#dati">Dati del modulo</a><a href="#cookie">Cookie e preferenze</a><a href="#diritti">I tuoi diritti</a></nav>
+        <div className="policy-content">
+          <section id="titolare"><span className="policy-number">01</span><h2>Chi tratta i dati</h2><p>Il titolare indicato per questo sito è ONE Tech Srl, Via Gustavo Fara 35, 20124 Milano. Per richieste sulla privacy puoi scrivere a <a href="mailto:sales@otech.one">sales@otech.one</a>. Prima di pubblicare il sito, il titolare dovrebbe confermare questi dati e indicare un eventuale contatto privacy dedicato.</p></section>
+          <section id="dati"><span className="policy-number">02</span><h2>Quando ci scrivi</h2><p>Il modulo chiede nome, email, azienda, argomento e messaggio per rispondere alla tua richiesta e valutare i prossimi passi. I campi sono usati solo per questo contatto, non per inviarti newsletter. L’invio avviene sul server del sito; quando è configurato, il messaggio viene inoltrato alla casella commerciale di ONE Tech.</p><p>Nel prototipo i messaggi vengono conservati nel server locale per un massimo di 90 giorni e poi rimossi. In un’installazione pubblica, accesso, hosting, responsabili del trattamento e tempi effettivi di cancellazione vanno configurati e dichiarati dal titolare. Non inserire dati particolari o informazioni riservate nel modulo.</p><p>La base giuridica del ricontatto richiesto è l’esecuzione di misure precontrattuali (art. 6(1)(b) GDPR). La spunta conferma la presa visione dell’informativa; non è usata per iscrivere a newsletter o per altri scopi. I log tecnici strettamente necessari possono essere trattati per sicurezza e funzionamento del servizio.</p></section>
+          <section id="cookie"><span className="policy-number">03</span><h2>Cookie e preferenze</h2><p>Questa versione non carica cookie pubblicitari o script di tracciamento e non integra analytics. Salviamo nel browser la scelta sui cookie opzionali (localStorage), così da non chiedertela a ogni visita. È una preferenza tecnica necessaria, non un cookie di profilazione.</p><p>Puoi rifiutare gli strumenti opzionali con la stessa facilità con cui puoi accettarli. In questa versione la categoria “analisi” è predisposta, ma nessun servizio di analisi viene attivato anche se la abiliti. Puoi riaprire le preferenze dal piè di pagina.</p><button className="text-link policy-settings" type="button" onClick={() => window.dispatchEvent(new Event('onetech:cookie-settings'))}>Apri preferenze cookie <ArrowUpRight size={15} /></button></section>
+          <section id="diritti"><span className="policy-number">04</span><h2>I tuoi diritti</h2><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione o opposizione al trattamento dei tuoi dati, nei casi previsti dal GDPR. Scrivi a <a href="mailto:sales@otech.one">sales@otech.one</a>. Puoi inoltre proporre reclamo al Garante per la protezione dei dati personali. I dati non sono venduti né usati per decisioni automatizzate.</p></section>
+          <p className="policy-caveat">Informativa di base per il prototipo. Per la pubblicazione, il titolare deve verificarla rispetto ai servizi effettivamente attivi, al proprio assetto legale e ai fornitori usati.</p>
+        </div>
+      </div>
+    </main>
+  )
+}
+
+export default PrivacyPage
